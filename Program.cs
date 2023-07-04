@@ -1,2 +1,57 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿string seperator = "-------------------------------------";
+string header = "> ";
+string bullet = "* ";
+string listItem = "   - ";
+
+int playerCount = 3;
+int player1Level = 18;
+int player2level = 17;
+int player3Level = 20;
+
+string environment = "the hinterlands";
+string dayNight = "night";
+string weather = "stormy";
+
+int enemyCount = 2;
+
+// enemy 1
+string enemy1Name = "Black Dragon";
+int enemy1Threat = 20;
+
+// enemy 2
+string enemy2Name = "Leeroy Jenkins";
+int enemy2Threat = 34;
+
+Console.WriteLine(seperator);
+Console.WriteLine(header + "RPGef - encounter form");
+Console.WriteLine(seperator);
+Console.WriteLine("date: " + DateTime.Now.ToShortDateString());
+Console.WriteLine("time: " + DateTime.Now.ToShortTimeString());
+Console.WriteLine();
+
+Console.WriteLine(seperator);
+Console.WriteLine(header + "Players Info");
+Console.WriteLine(seperator);
+Console.WriteLine(bullet + "count: " + playerCount);
+// The parenthesis enclosing the player levels are important here!
+Console.WriteLine(bullet + "combined levels: " + (player1Level + player2level + player3Level));
+Console.WriteLine();
+
+Console.WriteLine(seperator);
+Console.WriteLine(header + "Environemnt");
+Console.WriteLine(seperator);
+Console.WriteLine(bullet + "name: " + environment);
+// backslash used as an escape character
+Console.WriteLine(bullet + "day\\night: " + dayNight);
+Console.WriteLine(bullet + "weather: " + weather);
+Console.WriteLine();
+
+Console.WriteLine(seperator);
+Console.WriteLine(header + "Enemies");
+Console.WriteLine(seperator);
+Console.WriteLine(bullet + "count: " + enemyCount);
+Console.WriteLine(bullet + "combined threat level: " + (enemy1Threat + enemy2Threat));
+Console.WriteLine(bullet + "items: ");
+Console.WriteLine(listItem + enemy1Name + " (" + enemy1Threat + ")");
+Console.WriteLine(listItem + enemy2Name + " (" + enemy2Threat + ")");
+Console.WriteLine();
