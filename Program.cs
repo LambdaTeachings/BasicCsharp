@@ -25,6 +25,9 @@ int enemy2Threat = 34;
 Console.WriteLine(seperator);
 Console.WriteLine(header + "RPGef - encounter form");
 Console.WriteLine(seperator);
+// You aren't familiar with this syntax just yet, but...
+// it's still very readable, right? It simply fetches the
+// current date and time and outputs them nicely
 Console.WriteLine("date: " + DateTime.Now.ToShortDateString());
 Console.WriteLine("time: " + DateTime.Now.ToShortTimeString());
 Console.WriteLine();
