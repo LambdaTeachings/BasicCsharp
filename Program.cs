@@ -1,4 +1,43 @@
-﻿string seperator = "-------------------------------------";
+﻿/*
+ * demo - RPG encounter form.
+ * 
+ * The RPG encounter form lets game designers look into specific
+ * encounters in a game to evaluate their difficulty.
+ * 
+ * The form should look exactly like in the example.
+
+
+ -------------------------------------
+> RPGef - encounter form
+-------------------------------------
+date: Monday, 2019-03-18
+time: 10:05:34 AM
+
+-------------------------------------
+> Players Info
+-------------------------------------
+* count: 3
+* combined levels: 55
+
+-------------------------------------
+> Environment
+-------------------------------------
+* name: the hinterlands
+* day\night: night
+* weather: stormy
+
+-------------------------------------
+> Enemies
+-------------------------------------
+* count: 2
+* combined threat level: 54
+* items:
+   - Black Dragon (20)
+   - Leeroy Jenkins (34)
+
+ */
+
+string seperator = "-------------------------------------";
 string header = "> ";
 string bullet = "* ";
 string listItem = "   - ";
