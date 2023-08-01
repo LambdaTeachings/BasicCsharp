@@ -10,5 +10,7 @@
         // try changing the distance to 2000m to see who wins
         var race = new Race(cars, 1000);
         race.DragRace().PrintResults();
+
+        Console.ReadLine();
     }
 }

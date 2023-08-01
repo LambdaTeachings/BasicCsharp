@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-class Race
+﻿class Race
 {
     Car[] _cars;
     float _distance;
@@ -20,7 +18,7 @@ class Race
         int timer = 0;
         int finishedCars = 0;
 
-        while(finishedCars < cars.Length)
+        while (finishedCars < cars.Length)
         {
             for (int i = 0; i < cars.Length; i++)
             {

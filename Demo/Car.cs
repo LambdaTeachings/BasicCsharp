@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-public class Car
+﻿public class Car
 {
     public Engine Engine;
 
