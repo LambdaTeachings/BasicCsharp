@@ -1,2 +1,2 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Circle c = new Circle(0, 0, 1);
+Console.WriteLine(c.PointInOnCircle(0.0f, 1f));
