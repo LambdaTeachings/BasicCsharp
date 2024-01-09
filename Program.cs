@@ -1,6 +1,5 @@
 ﻿using BasicCsharp;
 using System.Drawing;
-using System.Resources;
 
 var colors = GetColorsFromText(imageText.Image);
 
