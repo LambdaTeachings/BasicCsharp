@@ -1,10 +1,10 @@
-﻿class MovingElement
+﻿class MovingElementDemo
 {
     char[,] map = new char[10, 15];
     int playerPosX = 5;
     int playerPosY = 5;
 
-    public void Do()
+    public void Demo()
     {
         PlaceWalls();
 
