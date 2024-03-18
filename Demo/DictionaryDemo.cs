@@ -1,4 +1,6 @@
-﻿public static class DictionaryDemo
+DictionaryDemo.Demo();
+
+public static class DictionaryDemo
 {
     public static void Demo()
     {
@@ -30,7 +32,10 @@
         foreach (KeyValuePair<string, int> item in lootTable[level])
         {
             if (rand < item.Value)
-                Console.WriteLine($"You got a {item}");
+            {
+                Console.WriteLine($"Player ({level}) got a {item}");
+                break;
+            }
             else
                 rand -= item.Value;
         }
