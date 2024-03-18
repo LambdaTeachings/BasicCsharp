@@ -1,42 +1,36 @@
-﻿public static class QueueDemo
+QueueDemo.Demo();
+
+public static class QueueDemo
 {
     public static void Demo()
     {
         const int customers = 10;
-        const int cap = 10;
 
-        var q1 = new Queue<Customer>(customers);
-        var q2 = new Queue<Customer>(customers);
+        var steve = new Queue<Customer>(customers);
+        var jhon = new Queue<Customer>(customers);
 
         // Enqueue random customers
         for (int i = 0; i < customers; i++)
         {
-            q1.Enqueue(new Customer() { Id = i, Priority = Random.Shared.Next(0, cap) });
+            steve.Enqueue(new Customer() { Id = i });
         }
 
-        Console.WriteLine("The original Queue:");
-        PrintQueue(q1);
+        Console.WriteLine("John is on a break...");
+        Console.WriteLine("Steve's Queue:");
+        PrintQueue(steve);
 
-        CustomerServiceRep();
+        // steve goes on a break
+        CustomerServiceRep(steve, jhon);
 
-        Console.WriteLine("The order of service:");
-        PrintQueue(q2);
+        Console.WriteLine("Steve is taking a break, moving customers to John...");
+        Console.WriteLine("John's Queue");
+        PrintQueue(jhon);
 
-        void CustomerServiceRep()
+        void CustomerServiceRep(Queue<Customer> q1, Queue<Customer> q2)
         {
             while (q1.Count != 0)
             {
-                var customer = q1.Dequeue();
-
-                if (customer.Priority < cap)
-                {
-                    customer.Priority++;
-                    q1.Enqueue(customer);
-                }
-                else
-                {
-                    q2.Enqueue(customer);
-                }
+                q2.Enqueue(q1.Dequeue());
             }
         }
 
@@ -54,11 +48,9 @@
     class Customer
     {
         public int Id;
-        public int Priority;
-
         public override string ToString()
         {
-            return $"{Id} : {Priority}";
+            return Id.ToString();
         }
     }
 }
