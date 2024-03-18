@@ -9,7 +9,7 @@
         {
             Console.WriteLine($"Enter a number. Current count is {list.Count}.");
             Console.WriteLine($"enter 'a' for average, 's' for sum and 'm' for median");
-            Console.WriteLine($"enter 'x' to clear console");
+            Console.WriteLine($"enter 'c' to clear console");
             input = Console.ReadLine();
 
             if (int.TryParse(input, out int result))
